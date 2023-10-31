@@ -1,0 +1,54 @@
+
+
+<!-- Menú horizontal -->
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2 d-none d-md-block sidebar" style="background: #6a1b9a;;">
+      <div class="sidebar-sticky">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link active" href="home/admin" style="color: white;" >Inicio</a>
+            <a class="nav-link active"href="home/profile"  style="color: white;">
+              Perfil
+            </a>
+            <a class="nav-link active" href="home/analytics" style="color: white;">
+              Estadisticas
+            </a>
+          </li>
+          <!-- Agrega aquí más opciones del menú si es necesario -->
+        </ul>
+      </div>
+      <a href="auth/login" style="position: absolute; bottom: 10px;color: white; margin-left: 50px;">
+        Salir <i class="fas fa-sign-out-alt" style="color: white;"></i>
+       </a>
+    </div>
+
+    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+      <!-- Contenido principal -->
+    </main>
+  </div>
+</div>
+
+<!-- profile.component.html -->
+<body>
+  <div class="profile" style="margin-left: 260px;">
+    <h1 style="text-align: center; font-size: 30px;margin: 20px; color: #6a1b9a;">Bienvenido a TransPortaCol</h1>
+
+<div class="card-container" style="margin-left: 100px;">
+  <div class="card" *ngFor="let item of cardItems">
+    <img [src]="item.imageUrl" class="card-img-top" alt="Card Image">
+    <div class="card-body">
+      <h5 class="card-title">{{ item.title }}</h5>
+      <h5 style="color: green;">{{item.trip}}</h5>
+      <p class="card-text">{{ item.description }}</p>
+      CUPO:
+      <h5 *ngIf="item.capacity <= 2" style="color: red;">{{item.capacity}} Toneladas</h5>
+      <h5 *ngIf="item.capacity <= 5 && item.capacity > 2" style="color: #d97700;">{{item.capacity}} Toneladas</h5>
+      <h5 *ngIf=" item.capacity > 5" style="color: green">{{item.capacity}} Toneladas</h5>
+      <a href="home/trip" class="btn btn-primary">Agendar viaje</a>
+    </div>
+  </div>
+</div>
+
+</div>
+</body>

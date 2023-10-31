@@ -5,7 +5,7 @@ body {
   align-items: center;
   height: 100vh;
   margin: 0;
-  background-color: #f4f4f4;
+  background-color:blueviolet;
 }
 
 .signup-container {
@@ -44,7 +44,7 @@ input[type="password"] {
 }
 
 button {
-  background-color: #27ae60;
+  background-color:goldenrod;
   color: #fff;
   border: none;
   border-radius: 4px;
@@ -53,5 +53,5 @@ button {
 }
 
 button:hover {
-  background-color: #219d53;
+  background-color: gold;
 }

@@ -6,6 +6,7 @@ import { MapComponent } from '../components/map/map.component';
 import { AdminComponent } from '../components/admin/admin.component';
 import { ProfileComponent } from '../components/profile/profile.component';
 import { AnalyticsComponent } from '../components/analytics/analytics.component';
+import { TrucksComponent } from '../components/trucks/trucks.component';
 
 
 
@@ -27,6 +28,10 @@ const routes: Routes = [
   {
     path:'analytics',
     component:AnalyticsComponent
+  },
+  {
+    path:'trucks',
+    component:TrucksComponent
   },
    {
     redirectTo:'admin',

@@ -7,6 +7,7 @@ import { HomeRouterModule } from './router/home-router.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProfileComponent } from './components/profile/profile.component';
 import { AnalyticsComponent } from './components/analytics/analytics.component';
+import { TrucksComponent } from './components/trucks/trucks.component';
 
 //import {MatExpansionModule} from '@angular/material/expansion';
 //import { AgmCoreModule } from '@agm/core';
@@ -26,7 +27,8 @@ import { AnalyticsComponent } from './components/analytics/analytics.component';
     MapComponent,
     TripComponent,
     ProfileComponent,
-    AnalyticsComponent
+    AnalyticsComponent,
+    TrucksComponent
   ]
 })
 export class HomeModule { }

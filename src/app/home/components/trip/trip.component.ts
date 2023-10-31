@@ -26,7 +26,8 @@ export class TripComponent implements OnInit {
       telefonoContacto: ['', Validators.required],
       tipoCarga: ['Tipo_de_carga', Validators.required],
       fechaViaje: ['', Validators.required],
-      precio: [0, Validators.required]
+      precio: [0, Validators.required],
+      peso:[0,Validators.required]
     });
   }
 

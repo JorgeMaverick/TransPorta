@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import Chart from 'chart.js/auto';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { LocalStorageService } from '../../../core/services/local-storage.service';
 
 @Component({
   selector: 'app-admin',
@@ -10,12 +11,15 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 export class AdminComponent implements OnInit {
   chart: any; // Variable para almacenar la instancia del gráfico
   mapURL: any;
+  dataTrip:any
 
 
-  constructor(private sanitizer: DomSanitizer) { }
+  constructor(private sanitizer: DomSanitizer, private LocalStorageService:LocalStorageService) { }
 
   ngOnInit() {
     this.renderChart();
+   this.dataTrip = JSON.parse( this.LocalStorageService.getItem('tripsSelected'))
+   console.log(this.dataTrip)
   }
 
 

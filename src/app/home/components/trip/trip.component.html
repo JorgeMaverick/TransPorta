@@ -74,6 +74,7 @@
                 <p><span style="color: goldenrod;">Tipo de carga:</span> {{ tarea.tipoCarga }}</p>
                 <p>Teléfono de contacto: {{ tarea.telefonoContacto }}</p>
                 <p>Oferta: <span style="color: green;">{{tarea.precio | currency }} COP</span></p>
+                <p>peso toneladas {{tarea.peso}}</p>
               </div>
             </div>
           </div>
@@ -139,6 +140,11 @@
                     <option value="Tipo_de_carga">---Selecciona tipo de carga-----</option>
                     <!-- Agrega aquí más opciones si es necesario -->
                   </select>
+                </div>
+
+                <div class="form-group">
+                  <label>Peso de carga en toneladas:</label>
+                  <input type="number" class="form-control" placeholder="peso carga en toneladas" formControlName="peso">
                 </div>
                 <div class="form-group">
                   <div class="input-group">
