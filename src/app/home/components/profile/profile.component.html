@@ -1,0 +1,75 @@
+<!-- Barra principal -->
+<nav class="navbar navbar-expand-lg " style="background: white;">
+  <a class="navbar-brand" href="#">TransPortaCol</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="../admin/admin.component.html">Inicio</a>
+      </li>
+      <!--<li class="nav-item">
+        <a class="nav-link" href="#" style="color;">Acerca de</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" style="color:  white;">Contacto</a>
+      </li>-->
+    </ul>
+  </div>
+</nav>
+
+<!-- Menú horizontal -->
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2 d-none d-md-block sidebar" style="background: #6a1b9a;;">
+      <div class="sidebar-sticky">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link active" style="color: white;"  (click)="goHome()">Inicio</a>
+            <a class="nav-link active"  style="color: white;">
+              Perfil
+            </a>
+            <a class="nav-link active" href="home/analytics" style="color: white;">
+              Estadisticas
+            </a>
+          </li>
+          <!-- Agrega aquí más opciones del menú si es necesario -->
+        </ul>
+      </div>
+      <a href="auth/login" style="position: absolute; bottom: 10px;color: white; margin-left: 50px;">
+        Salir <i class="fas fa-sign-out-alt" style="color: white;"></i>
+       </a>
+    </div>
+
+    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+      <!-- Contenido principal -->
+    </main>
+  </div>
+</div>
+
+<!-- profile.component.html -->
+<body>
+<div class="profile" style="margin-left: 260px;">
+  <div class="profile-header">
+    <img src="../../../../assets/img/1672868094894.jpeg" alt="Foto de perfil" class="profile-picture">
+    <h2>Jorge Luis Montoya</h2>
+    <p>jorge.montoyap@uniagustiniana.edu.co</p>
+  </div>
+
+  <div class="profile-details">
+    <h3>Detalles del Perfil</h3>
+    <ul>
+      <li><strong>Edad:</strong> 24 Años</li>
+      <li><strong>Ubicación:</strong> cll 151b #117-51</li>
+      <li><strong>Trabajo:</strong> Software Engineer | Wihom Software</li>
+
+    </ul>
+  </div>
+
+  <div class="profile-bio">
+    <h3>Biografía</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda eum sunt consectetur veniam quo cumque iste voluptatibus, velit voluptas enim inventore tenetur excepturi repellendus dicta voluptatum animi commodi nisi doloremque!</p>
+  </div>
+</div>
+</body>

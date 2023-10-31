@@ -1,0 +1,67 @@
+.destacar-verde {
+  text-decoration: underline;
+  color: green;
+}
+
+.destacar-amarillo {
+  text-decoration: underline;
+  color: goldenrod;
+}
+
+
+/* Estilos para la barra principal */
+.navbar {
+  background-color: white;
+}
+
+.navbar-brand {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-link {
+  color: #333;
+}
+
+/* Estilos para el menú horizontal */
+.sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  padding-top: 56px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav-item {
+  padding: 8px;
+}
+
+.nav-link {
+  color: #333;
+}
+
+.sidebar-sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 56px;
+}
+
+.custom-title {
+  color: #333;
+  font-size: 36px;
+  text-align: center;
+  margin-top: 20px; /* O cualquier otro valor para ajustar el margen superior */
+  /* Otros estilos personalizados */
+}
+
+
+.btn-top-right {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.form-group{
+  margin-top: 10px;
+}

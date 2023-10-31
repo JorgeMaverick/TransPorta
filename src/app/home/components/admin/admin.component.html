@@ -1,0 +1,48 @@
+<body>
+  <div class="dashboard-container">
+    <div class="sidebar">
+      <h3>Dashboard</h3>
+      <ul style="margin-top: 70%;">
+        <li><a href="home/profile">Perfil</a></li>
+        <li><a href="home/trip">Viajes</a></li>
+        <li><a href="home/analytics">Estadisticas</a></li>
+      </ul>
+      <a href="auth/login" style="position: absolute; bottom: 10px;color: white;">
+       Salir <i class="fas fa-sign-out-alt" style="color: white;"></i>
+      </a>
+    </div>
+    <div class="main-content">
+      <div id="trips" class="section">
+        <div class="welcome-message">
+          <h1>Bienvenido a TransPortaCol a continuación tu viaje programado</h1>
+        </div>
+        <div class="table">
+          <div class="container text-center w-full">
+            <h1>Origen</h1>
+            <i class="fas fa-arrow-right" style="color:  #6a1b9a;"></i>
+            <h1>Destino</h1>
+          </div>
+          <div style="display: flex; padding: 20px;">
+          <iframe  [src]="getMapURL()" width="600" height="450" style="border:0; padding: 10px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31728.553035113327!2d-75.61654177578532!3d6.254623059393178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e44290e99a6e195%3A0x9ec0a1f4596fadd4!2sLaureles%20-%20Estadio%2C%20Medell%C3%ADn%2C%20Antioquia!5e0!3m2!1ses-419!2sco!4v1698701487096!5m2!1ses-419!2sco" width="600" height="450" style="border:0; padding: 10px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+         <a href="https://maps.app.goo.gl/NKgtvZnmzCZ8Xks9A" target="_blank" style="display: flex; justify-content: center;">
+        <button class="btn btn-play">
+          <i class="fas fa-play" style="color:  #6a1b9a;"></i> Iniciar Viaje
+        </button>
+      </a>
+      </div>
+      </div>
+
+
+    </div>
+  </div>
+</body>
+
+
+  <!---- <div id="analytics" class="section">
+        <h2>Analytics</h2>
+        <div class="chart">
+          <canvas id="myDoughnutChart" width="50" height="50"></canvas>
+        </div>
+      </div>--->
