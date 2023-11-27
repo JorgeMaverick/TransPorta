@@ -62,3 +62,29 @@ button:disabled{
   cursor: not-allowed; /* Cambiar cursor */
 
 }
+
+/* Estilos para el círculo de carga */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading {
+  border: 8px solid rgba(0, 0, 0, 0.1);
+  border-top: 8px solid #3498db; /* El color superior es diferente para destacar el movimiento */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 2s linear infinite;
+  margin: 20px auto; /* Alinea el círculo en el centro */
+  /* Otros estilos, si es necesario */
+}
+
+.show-loading {
+  display: block; /* Muestra el círculo de carga */
+}
+
+/* Si deseas incluir un mensaje de "Cargando..." */
+.loading-text {
+  text-align: center;
+}

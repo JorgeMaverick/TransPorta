@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LocalStorageService } from './core/services/local-storage.service';
+//import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -11,7 +12,8 @@ import { LocalStorageService } from './core/services/local-storage.service';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+   //MatSnackBarModule
   ],
   providers: [LocalStorageService],
   bootstrap: [AppComponent]

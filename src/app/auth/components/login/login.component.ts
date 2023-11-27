@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 
 
 
+
 //const app = initializeApp(firebaseConfig);
 //const analytics = getAnalytics(app);
 
@@ -21,6 +22,7 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
   loginForm: FormGroup;
+  showLoading: boolean = false;
 
   constructor(private auth: AngularFireAuth, private formBuilder: FormBuilder,private localStorageService: LocalStorageService, private router: Router) {
     this.loginForm = this.formBuilder.group({
@@ -60,7 +62,18 @@ export class LoginComponent implements OnInit {
       }
     }
 
-    goHome(){
+    goHome():void{
+      this.showLoading = true; // Muestra el mensaje de carga al inicializar el componente
+
+      // Espera 2 segundos (2000 milisegundos) y luego redirige
+      setTimeout(() => {
+        this.redirectToAnotherPage();
+      }, 2000);
+    }
+
+    redirectToAnotherPage(): void {
+      this.showLoading = false;
+      // Realiza la redirección aquí, por ejemplo:
       this.router.navigate(['/home/trucks']);
     }
 

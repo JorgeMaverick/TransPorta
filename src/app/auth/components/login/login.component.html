@@ -1,17 +1,24 @@
 <body>
-<div class="login-container">
+<div class="login-container" *ngIf="!showLoading">
   <form class="login-form" [formGroup]="loginForm">
     <h2>Bienvenido a TransPortaCol</h2>
     <div class="form-group">
       <label for="email">Email</label>
-      <input type="email" id="email" placeholder="Enter your email" required>
+      <input type="email" id="email" formControlName="email" placeholder="Enter your email" required>
     </div>
     <div class="form-group">
       <label for="password">Password</label>
-      <input type="password" id="password" placeholder="Enter your password" required>
+      <input type="password" id="password"  formControlName="password"  placeholder="Enter your password" required>
     </div>
     <a href="auth/sign-up">Registrarse</a>
     <button type="submit"  [disabled]="this.loginForm.valid == false"  (click)="goHome()">Login</button>
   </form>
 </div>
+
+
+<div *ngIf="showLoading" class="loading-text">
+  <div class="loading"></div>
+  <p style="color: white;">Iniciando Sesion... {{this.loginForm.controls['email'].value}} </p>
+</div>
 </body>
+
