@@ -63,7 +63,7 @@ export class AdminComponent implements OnInit {
     const baseURL = `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.0706338137634!2d-74.10778992472343!3d4.757739541159866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f8468d01152a5%3A0xc2c6066c7eac6e6f!2s!5e0!3m2!1ses-419!2s${direccionFormateada}co!4v1698701443375!5m2!1ses-419!2sco`;
 
     // Combina la URL base con la dirección proporcionada
-    this.mapURL = this.sanitizer.bypassSecurityTrustResourceUrl(`${baseURL}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f8468d01152a5%3A0xc2c6066c7eac6e6f!2s${direccionFormateada}!5e0`);
+    this.mapURL = baseURL
 
     return this.mapURL;
   }
